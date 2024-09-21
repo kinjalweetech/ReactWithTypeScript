@@ -1,0 +1,29 @@
+.header h1 {
+    background-color: rgb(50, 142, 112);
+    width: 40%;
+    margin-left: 28%;
+}
+.input {
+    padding: 20px;
+    
+}
+.input1 {
+    padding: 15px;
+    font-size: large;
+}
+.button {
+    padding: 15px;
+    background-color: rgb(87, 132, 192);
+    font-size: large;
+}
+.body {
+    border: 2px;
+   
+}
+.userlist{
+    border: 2px solid black;
+    width: 25%;
+    margin: 10px auto;
+    display: block;
+    grid-template-columns: max-content;
+}
