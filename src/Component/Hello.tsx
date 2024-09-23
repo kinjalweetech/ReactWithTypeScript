@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../Component/Hello.css";
 
-const Hello: React.FC = () => {
+const Hello = () => {
   const Users = [
     { name: "kirtan", age: 20, designation: "graphicDesigner" },
     { name: "Mira", age: 22, designation: "webDevloper" },
@@ -19,7 +19,7 @@ const Hello: React.FC = () => {
       ? Users.filter((e) => e.name.toLowerCase() === text.toLowerCase())
       : Users;
       console.log("finduser",findUser);
-      
+
     setUserList(findUser);
   };
 
