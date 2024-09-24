@@ -23,6 +23,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ApiCall from "./Component/ApiCall";
 import BasicTask from "./Component/BasicTask";
+import ToDo from "./Component/ToDo";
 // import UserDetail from "./Component/SingleUserApi";
 
 const App: React.FC = () => {
@@ -30,7 +31,8 @@ const App: React.FC = () => {
     <Router>
       <Routes>
         {/* <Route path="/" element={<ApiCall/>} /> */}
-          <Route path="/" element= {<BasicTask/>}/>
+          {/* <Route path="/" element= {<BasicTask/>}/> */}
+          <Route path="/" element={<ToDo/>}/>
       </Routes>
     </Router>
   );

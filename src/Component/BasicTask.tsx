@@ -195,67 +195,67 @@ import { useState } from "react";
 // export default BasicTask;
 
 //9....Use useRef for DOM Manipulation
-// import { useRef } from "react";
+import { useRef } from "react";
 
-// const BasicTask: React.FC = () => {
-//   const inputRef = useRef<HTMLInputElement>(null);
+const BasicTask: React.FC = () => {
+  const inputRef = useRef<HTMLInputElement>(null);
 
-//   const focusInput = () => {
-//     if (inputRef.current) {
-//       inputRef.current.focus();
-//     }
-//   };
+  const focusInput = () => {
+    if (inputRef.current) {
+      inputRef.current.focus();
+    }
+  };
 
-//   return (
-//     <div>
-//       <input type="text" ref={inputRef} />
-//       <button onClick={focusInput}>Focus Input</button>
-//     </div>
-//   );
-// };
+  return (
+    <div>
+      <input type="text" ref={inputRef} />
+      <button onClick={focusInput}>Focus Input</button>
+    </div>
+  );
+};
 
-// export default BasicTask;
+export default BasicTask;
 
 
 //10..... Form Handling with TypeScript
 
-interface FormData {
-    name: string;
-    email: string;
-  }
+// interface FormData {
+//     name: string;
+//     email: string;
+//   }
   
-  const BasicTask: React.FC = () => {
-    const [formData, setFormData] = useState<FormData>({ name: "", email: "" });
+//   const BasicTask: React.FC = () => {
+//     const [formData, setFormData] = useState<FormData>({ name: "", email: "" });
   
-    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-      setFormData({ ...formData, [e.target.name]: e.target.value });
-    };
+//     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+//       setFormData({ ...formData, [e.target.name]: e.target.value });
+//     };
   
-    const handleSubmit = (e: React.FormEvent) => {
-      e.preventDefault();
-      console.log("Form Data:", formData);
-    };
+//     const handleSubmit = (e: React.FormEvent) => {
+//       e.preventDefault();
+//       console.log("Form Data:", formData);
+//     };
   
-    return (
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="name"
-          value={formData.name}
-          onChange={handleInputChange}
-          placeholder="Name"
-        />
-        <input
-          type="email"
-          name="email"
-          value={formData.email}
-          onChange={handleInputChange}
-          placeholder="Email"
-        />
-        <button type="submit">Submit</button>
-      </form>
-    );
-  };
+//     return (
+//       <form onSubmit={handleSubmit}>
+//         <input
+//           type="text"
+//           name="name"
+//           value={formData.name}
+//           onChange={handleInputChange}
+//           placeholder="Name"
+//         />
+//         <input
+//           type="email"
+//           name="email"
+//           value={formData.email}
+//           onChange={handleInputChange}
+//           placeholder="Email"
+//         />
+//         <button type="submit">Submit</button>
+//       </form>
+//     );
+//   };
   
-  export default BasicTask;
+//   export default BasicTask;
   
